@@ -1,0 +1,24 @@
+function askBot() {
+    $("#send_button").click(function () {
+
+        var user_bot_input_text = $("#bot_input_text").val()
+
+        if (user_bot_input_text != "") {
+
+            $("#chat_messages").append('<div class="user__messages">' + user_bot_input_text + ' </div>')
+
+            //Clear the text input box after sending message
+            $("#bot_input_text").val('');
+
+            let chat_input_data = {
+                "user_bot_input_text": user_bot_input_text
+            }
+            //Write AJAX call here
+            $.ajax({
+
+
+            });
+        }
+    })
+}
+
